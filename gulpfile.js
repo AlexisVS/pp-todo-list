@@ -8,6 +8,7 @@ let plugins = [
     require('postcss-import'),
     require('tailwindcss')
 ]
+
 gulp.task('css', async () => {
     return gulp.src("./src/**/*.css")
         .pipe(sourcemaps.init())
@@ -16,3 +17,5 @@ gulp.task('css', async () => {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./public/css/'))
 })
+
+gulp.watch()
